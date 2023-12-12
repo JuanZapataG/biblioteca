@@ -17,7 +17,7 @@ public class Libro implements CalculablePeso, CalculableCosto{
     private String titulo;
     private String isbn;
     private Long autorId;
-    private Integer pesoNeto;
+    private Double pesoNeto;
     private Double precioBase;
     private String editorial;
 
@@ -29,8 +29,8 @@ public class Libro implements CalculablePeso, CalculableCosto{
     }
 
     @Override
-    public Integer calcularPesoTotal() {
+    public Double calcularPesoTotal() {
         Double impuesto = 0.1 * precioBase;
-        return this.pesoNeto + impuesto.intValue();
+        return this.pesoNeto + impuesto;
     }
 }
