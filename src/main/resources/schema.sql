@@ -1,8 +1,9 @@
 CREATE TABLE IF NOT EXISTS autores (
-    id INT PRIMARY KEY,
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     nombre VARCHAR(255),
     nacionalidad VARCHAR(255),
-    fechaNacimiento VARCHAR(255)
+    fechanacimiento VARCHAR(255),
+    fechadefuncion VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS libros (
@@ -20,7 +21,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     id INT PRIMARY KEY,
     nombre VARCHAR(255),
     email VARCHAR(255),
-    estado VARCHAR(255)
+    estado VARCHAR(255),
+    fechanacimiento VARCHAR(255)
 );
 
 CREATE TABLE IF NOT EXISTS prestamos (
